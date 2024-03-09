@@ -1,3 +1,4 @@
+import 'package:employee_form/pages/employee_form.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),),
-      floatingActionButton: FloatingActionButton(onPressed: (){}, child: const Icon(Icons.add))
+      floatingActionButton: FloatingActionButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context){return const EmployeeForm();}));}, child: const Icon(Icons.add))
       
     );
   }

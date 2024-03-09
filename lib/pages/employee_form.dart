@@ -19,7 +19,7 @@ class _EmployeeFormState extends State<EmployeeForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: (){Navigator.of(context).pop();}, icon: const Icon(Icons.arrow_back)),
         title: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -65,11 +65,12 @@ class _EmployeeFormState extends State<EmployeeForm> {
               Map<String,dynamic> employeeInfomap = {
               "Name" : namecontroller.text,
               "Age" : agecontroller.text,
-              "Location" : locationcontroller.text
+              "Id" : id,
+               "Location" : locationcontroller.text
             };
             await Database ().addEmployeeDetails(employeeInfomap, id).then((value) {
               Fluttertoast.showToast(
-        msg: "This is Center Short Toast",
+        msg: "Employee Details has been added successfuly ",
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         timeInSecForIosWeb: 1,
