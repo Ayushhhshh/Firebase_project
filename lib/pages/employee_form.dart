@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
-class EmployeeForm extends StatelessWidget {
+class EmployeeForm extends StatefulWidget {
   const EmployeeForm({super.key});
 
+  @override
+  State<EmployeeForm> createState() => _EmployeeFormState();
+}
+
+class _EmployeeFormState extends State<EmployeeForm> {
+  TextEditingController namecontroller = TextEditingController();
+  TextEditingController agecontroller = TextEditingController();
+  TextEditingController locationcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +32,7 @@ class EmployeeForm extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
+                controller: namecontroller,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))),
               ),
@@ -33,6 +42,7 @@ class EmployeeForm extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
+                controller: agecontroller,
                 decoration: InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))),
               ),
             ),
@@ -41,6 +51,7 @@ class EmployeeForm extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
+                controller: locationcontroller,
                 decoration: InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))),
               ),
             ),
