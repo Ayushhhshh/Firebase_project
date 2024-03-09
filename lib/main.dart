@@ -2,7 +2,7 @@ import 'package:employee_form/pages/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() async{
+void main() async {
   await Firebase.initializeApp();
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-    )
-    ;
+    );
   }
 }

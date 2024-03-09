@@ -68,7 +68,7 @@ class _EmployeeFormState extends State<EmployeeForm> {
               "Id" : id,
                "Location" : locationcontroller.text
             };
-            await Database ().addEmployeeDetails(employeeInfomap, id).then((value) {
+            await Database().addEmployeeDetails(employeeInfomap, id).then((value) {
               Fluttertoast.showToast(
         msg: "Employee Details has been added successfuly ",
         toastLength: Toast.LENGTH_SHORT,
