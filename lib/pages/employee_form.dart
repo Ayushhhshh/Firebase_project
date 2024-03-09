@@ -1,4 +1,8 @@
+import 'package:employee_form/service/firebase.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:random_string/random_string.dart';
 
 class EmployeeForm extends StatefulWidget {
   const EmployeeForm({super.key});
@@ -56,7 +60,27 @@ class _EmployeeFormState extends State<EmployeeForm> {
               ),
             ),
             const SizedBox(height: 40),
-            Center(child: ElevatedButton(onPressed: () {}, child: const Text("Add", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),))),
+            Center(child: ElevatedButton(onPressed: () async{
+              String id = randomAlphaNumeric(10);
+              Map<String,dynamic> employeeInfomap = {
+              "Name" : namecontroller.text,
+              "Age" : agecontroller.text,
+              "Location" : locationcontroller.text
+            };
+            await Database ().addEmployeeDetails(employeeInfomap, id).then((value) {
+              Fluttertoast.showToast(
+        msg: "This is Center Short Toast",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+            }
+            );
+            },
+            child: const Text("Add", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),))),
           ],
         ),
         ),
