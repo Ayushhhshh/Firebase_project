@@ -1,5 +1,5 @@
 import 'package:employee_form/service/firebase.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart'; 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:random_string/random_string.dart';
@@ -77,7 +77,7 @@ class _EmployeeFormState extends State<EmployeeForm> {
         backgroundColor: Colors.red,
         textColor: Colors.white,
         fontSize: 16.0
-    );
+    ); 
             }
             );
             },
