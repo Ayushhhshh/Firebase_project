@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),),
-      floatingActionButton: FloatingActionButton(onPressed: (){}, child: IconButton(onPressed: (){}, icon: GestureDetector(child: const Icon(Icons.add))),),
+      floatingActionButton: FloatingActionButton(onPressed: (){}, child: const Icon(Icons.add))
       
     );
   }
