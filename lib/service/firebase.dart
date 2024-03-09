@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 
 class Database{
   Future addEmployeeDetails(Map<String,dynamic> employeeInfoMap, String id)async{
-    FirebaseFirestore.instance.
+    return await FirebaseFirestore.instance.
     collection("Employee")
     .doc(id)
     .set(employeeInfoMap);
