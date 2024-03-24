@@ -1,43 +1,26 @@
 {
   "project_info": {
-    "project_number": "461334967932",
-    "project_id": "employee-form-366b6",
-    "storage_bucket": "employee-form-366b6.appspot.com"
+    "project_number": "196312047891",
+    "project_id": "employee-form-90748",
+    "storage_bucket": "employee-form-90748.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:461334967932:android:d0de76d72f066522943bf9",
+        "mobilesdk_app_id": "1:196312047891:android:8908541fdb67bc49023ae6",
         "android_client_info": {
           "package_name": "com.example.employeeform"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "461334967932-u8ueil1t53fo8gieq8a1rlitmv0av4lv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD6uOiwgOOjnXtsZMliCRt11yF98lxOjA8"
+          "current_key": "AIzaSyADPpn333AiZELvHOLBEEt-gMuDIJWElxs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "461334967932-u8ueil1t53fo8gieq8a1rlitmv0av4lv.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "461334967932-ne30pao8vkoi7nlaj6fsu3kth1r11jsg.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.employeeForm"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
